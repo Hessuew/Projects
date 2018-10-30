@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    
+    <script>
+
+        function addName() {
+            var table = document.getElementById("name_table");
+            var row = table.insertRow(-1);
+            var cell = row.insertCell(0); 
+            var cell2 = row.insertCell(1);                   
+
+            var user_input_name = document.getElementById("name").value;
+            var user_input_address = document.getElementById("address").value;
+            console.log(user_input_name);
+            console.log(user_input_address);      
+
+            cell.innerHTML = user_input_name;     
+            cell2.innerHTML = user_input_address;
+
+            document.getElementById("address").style.backgroundColor ="white";
+            document.getElementById("name").style.backgroundColor ="white";
+
+            if (user_input_address==""){
+                document.getElementById("address").style.backgroundColor ="red";                
+                table.deleteRow(-1);
+            }
+
+            if(user_input_name==""){
+                document.getElementById("name").style.backgroundColor ="red";
+                table.deleteRow(-1);
+            }     
+
+            if(user_input_address=="" && user_input_name==""){
+                table.insertRow(-1);
+            }
+            
+        }   
+    </script>
+    <style>        
+        div {
+            padding: 5px;
+        }
+
+        table, th, tr, td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+
+<form>
+  <div>
+    <label id="label_name">Nimi:</label>
+    <input id="name" name="user_name"></input>     
+  </div>    
+  <div>
+    <label id="label_address">Osoite:</label>
+    <input id="address" name="user_address"></input>
+  </div>
+</form>
+<button id="btn_add" onclick="addName();">Lisää nimi</button>
+
+<div>
+<table> 
+    <thead>
+        <tr>
+            <th>Nimi</th>
+            <th>Osoite</th>
+        </tr>
+    </thead>
+    
+    <tbody id="name_table">         
+        
+    </tbody>
+</table>
+</div>
+    
+</body>
+</html>

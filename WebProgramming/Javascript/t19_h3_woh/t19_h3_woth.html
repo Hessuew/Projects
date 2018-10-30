@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>t19_h3_woh.html</title>
+
+    <script>
+
+            var taulukko = [17, 150, 2, 3, 55, 309, 22, 93, 5];
+            // var taulukko = [];
+            // var taulukko = new Array();
+            taulukko.push(89);
+            var reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+            function laskeTaulukkoArvot(taulukko) {
+                
+                // Tehtävässä pyydettyjen arvojen laskeminen
+
+                var taulukko_min = Math.min.apply(null, taulukko);
+                var taulukko_max = Math.max.apply(null, taulukko);
+                var taulukko_sum = taulukko.reduce(reducer);
+                var taulukko_avg = taulukko_sum / taulukko.length; 
+                
+                
+              // Tulostukset konsoliin
+                console.log("Taulukon sisältö oli: " + taulukko);
+                console.log("Taulukon pienin arvo oli: " + taulukko_min);
+                console.log("Taulukon suurin arvo oli: " + taulukko_max);
+                console.log("Taulukon arvojen summa oli: " + taulukko_sum);
+                console.log("Taulukon arvojen keskiarvo oli : " + taulukko_avg);
+
+
+
+            } // Taulukon summaamiseen löytyi apua Mozillan JS-ohjeesta.
+
+            laskeTaulukkoArvot(taulukko);
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

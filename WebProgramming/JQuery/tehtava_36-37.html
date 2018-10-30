@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 36-37</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        label,
+        input {
+            display: block;
+        }
+
+        input.text {
+            margin-bottom: 12px;
+            width: 95%;
+            padding: .4em;
+        }
+
+        fieldset {
+            padding: 0;
+            border: 0;
+            margin-top: 25px;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            margin: .6em 0;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .ui-dialog .ui-state-error {
+            padding: .3em;
+        }
+
+        .validateTips {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var dialog, form,
+
+                name = $("#name"),
+                password = $("#password"),
+                allFields = $([]).add(name).add(password),
+                tips = $(".validateTips");
+            var spinner = $("#spinner").spinner({ // T37 spinner
+                min: 0,
+                max: 100
+            });
+
+            function updateTips(t) {
+                tips
+                    .text(t)
+                    .addClass("ui-state-highlight");
+                setTimeout(function () {
+                    tips.removeClass("ui-state-highlight", 1500);
+                }, 500);
+            }
+
+            function checkLength(o, n, min, max) {
+                if (o.val().length > max || o.val().length < min) {
+                    o.addClass("ui-state-error");
+                    updateTips("Length of " + n + " must be between " +
+                        min + " and " + max + ".");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function checkRegexp(o, regexp, n) {
+                if (!(regexp.test(o.val()))) {
+                    o.addClass("ui-state-error");
+                    updateTips(n);
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function addUser() {
+                var valid = true;
+                allFields.removeClass("ui-state-error");
+
+                valid = valid && checkLength(name, "username", 5, 16);
+                valid = valid && checkLength(password, "password", 5, 16);
+
+                valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+                valid = valid && checkRegexp(password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9");
+
+                if (valid) {
+                    $("#tiedot").html(name.val() + " " + password.val() + "<br/>");
+                    if ($("#enable").prop("checked")) { // T37 tarkistetaan checkbox
+                        $("#tiedot").append($("#oppilaitos").val() + " " + $("#spinner").val())
+                    }
+                    $("#sisalto").removeClass("hidden");
+                    dialog.dialog("close");
+                }
+                return valid;
+            }
+
+            dialog = $("#dialog-form").dialog({
+                autoOpen: false,
+                height: 500,
+                width: 350,
+                modal: true,
+                buttons: {
+                    "Save": addUser,
+                    "Peruuta": function () {
+                        dialog.dialog("close");
+                    }
+                },
+                close: function () {
+                    form[0].reset();
+                    allFields.removeClass("ui-state-error");
+                }
+            });
+
+            form = dialog.find("form").on("submit", function (event) {
+                event.preventDefault();
+                addUser();
+            });
+
+            $("#reg").button().on("click", function () {
+                $("#oppilaitos").prop("disabled", true);
+                $("#oppilaitos").addClass("ui-state-disabled");
+                spinner.spinner("disable");
+                dialog.dialog("open");
+            });
+
+            $("#enable").click(function () { // T37 checkboxin toiminto
+                if (spinner.spinner("option", "disabled") && $("#oppilaitos").prop("disabled")) {
+                    spinner.spinner("enable");
+                    $("#oppilaitos").prop("disabled", false);
+                    $("#oppilaitos").removeClass("ui-state-disabled");
+                } else {
+                    spinner.spinner("disable");
+                    $("#oppilaitos").prop("disabled", true);
+                    $("#oppilaitos").addClass("ui-state-disabled");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="dialog-form" title="Rekisteröityminen">
+        <p class="validateTips">Kaikki kentät pakollisia.</p>
+
+        <form>
+            <fieldset>
+                <label for="name">Nimi</label>
+                <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+                <label for="password">Salasana</label>
+                <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+
+                <!-- T37 lisäykset -->
+                <input type="checkbox" id="enable">Lisätiedot
+                <p>
+                    <label for="oppilaitos">Oppilaitos</label>
+                    <input type="text" name="oppilaitos" id="oppilaitos" value="" class="text ui-widget-content ui-corner-all">
+                </p>
+                <p>
+                    <label for="spinner">Ikä</label>
+                    <input id="spinner" name="value">
+                </p>
+
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+
+    <p id="tiedot"></p>
+    <button id="reg">Rekisteröidy</button>
+    <div id="sisalto" class="hidden">
+        <h1>Tehtävä 36 ja 37</h1>
+        <p>Tekstiä tekstiä tekstiä tekstiä tekstiä tekstiä.</p>
+    </div>
+</body>
+
+</html>
