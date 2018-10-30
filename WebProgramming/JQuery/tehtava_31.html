@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 31</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("article").hide();
+
+            $("#l1").click(function () {
+                $("article").hide(3000);
+                $("#a1").show(2000);
+            });
+
+            $("#l2").click(function () {
+                $("article").hide(3000);
+                $("#a2").show(2000);
+            });
+
+            $("#l3").click(function () {
+                $("article").hide(3000);
+                $("#a3").show(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <a href="#" id="l1">Artikkeli 1</a>
+        <a href="#" id="l2">Artikkeli 2</a>
+        <a href="#" id="l3">Artikkeli 3</a>
+    </p>
+    <article id="a1"><h1>Artikkeli 1</h1>Tekstiä tekstiä</article>
+    <article id="a2"><h1>Artikkeli 2</h1>Tekstiä tekstiä</article>
+    <article id="a3"><h1>Artikkeli 3</h1>Tekstiä tekstiä</article>
+</body>
+</html>
