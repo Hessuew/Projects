@@ -1,3 +1,3 @@
 # School-projects
-Projects I have made in school courses
-I'll add soon the projects here.
+Projects I have made in school courses:
+Programming III, TRA: Data structures and algorithms, Webprogramming 
