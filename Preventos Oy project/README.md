@@ -1,4 +1,11 @@
-# client
+# Preventos Oy project
+
+Tekemäni osat sijaitseva: 
+src>components: AddMDatatable, AddMDialog, Navbar, RequestDatatable, RequestDialog, UserDatatable ja Userdialog
+views: AddMeasurement, Users ja Request, 
+vuex: AddMActions.js, RequestActions ja UserDtActions 
+
+Sovellus on tehty käyttäen vuetify tyylikirjastoa 
 
 ## Project setup
 ```
@@ -10,25 +17,4 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
