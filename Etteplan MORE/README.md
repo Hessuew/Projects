@@ -14,8 +14,8 @@ Lisäksi komponenttien tiedostollinen rakenne mahdollistaa ymmärrettänät ja s
 
 ##Puuttuvaa/vajaata
 ```
-#### Sain tehtyä suurimman osan ennakkotehtävästä, mutta kaikkiin osiin en keksinyt ratkaisua
-```
+Sain tehtyä suurimman osan ennakkotehtävästä, mutta kaikkiin osiin en keksinyt ratkaisua
+
 - Paikkakunnat ovat stationShotCode: en keksinyt miten saada eri API kutsun stationName näkymään vastaavaan kohtaan
 - Saapumis/lähtemisaika: lähtöaseman aika, yritin eri mahdollisuuksia saada halutun aseman aika (kirjoitin kommmentteihin yritykseni), mutten onnistunut
 - Ajat ovat osaksi jo menneitä kellonaikoja: hain tiedot asemalle saapuvien ja lähtevien junien API puolelta (10 seuraavaa saapuvaa ja lähtevää),
