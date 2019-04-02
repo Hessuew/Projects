@@ -1,12 +1,14 @@
 # Etteplan MORE project
 ```
 Tekemäni osat sijaitseva: my-app>src App.vue, store.js js my-app>src>components DtNakyma.vue
-Tein sovelluksen käyttäen vuetify tyylikirjastoa boostrap:n sijaan, joten komponenttien ulkonäkö on pienesti erilainen, mutta täysin ymmärrettävä ja selkeä
+Tein sovelluksen käyttäen vuetify tyylikirjastoa boostrap:n sijaan, 
+joten komponenttien ulkonäkö on pienesti erilainen, mutta täysin ymmärrettävä ja selkeä
 ```
 
 ## Käytön helppous ja tietojen kattavuus
 ```
-Sovellus on helppokäyttöinen ja kattava tiedoiltaan, mutta paranneltavaa olisi ollut peruutettujen junien rivin "himmennys"/disaplointi
+Sovellus on helppokäyttöinen ja kattava tiedoiltaan, mutta paranneltavaa olisi ollut 
+peruutettujen junien rivin "himmennys"/disaplointi
 Tein datan haun API:sta vuex storeen, josta sitä on helppo käyttää ja tarvittaessa muokata. Tämä mahdollistaa hyvät jatkokehitysmahdollisuudet
 Lisäksi komponenttien tiedostollinen rakenne mahdollistaa ymmärrettänät ja selkeät jatkokehitys mahdollisuudet
 ```
