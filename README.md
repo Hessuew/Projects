@@ -9,7 +9,7 @@ My project groups coding files. More explanation in folder.
 ## TCD project
 My trainee period full javascript component with cookies.
 
-##Laiterekisteri 
+## Laiterekisteri 
 Webprogrammin Pratice Assigment- courses webpage project
 
 ## Projects I have made in school courses
