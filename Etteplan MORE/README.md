@@ -1,8 +1,8 @@
 # Etteplan MORE project
 
 Tekemäni osat sijaitseva: 
-my-app>src App.vue, store.js 
-src>components DtNakyma.vue
+my-app>src: App.vue, store.js 
+src>components: DtNakyma.vue
 
 Tein sovelluksen käyttäen vuetify tyylikirjastoa boostrap:n sijaan, 
 joten komponenttien ulkonäkö on pienesti erilainen, mutta täysin ymmärrettävä ja selkeä
