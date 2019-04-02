@@ -29,12 +29,24 @@ En keksinyt miten saada eri API kutsun stationName näkymään vastaavaan kohtaa
 
 ### Saapumis/lähtemisaika
 
-Lähtöaseman aika, yritin eri mahdollisuuksia saada halutun aseman aika (kirjoitin kommmentteihin yritykseni),
-mutten onnistunut
+Yritin eri mahdollisuuksia saada halutun aseman aika (kirjoitin kommmentteihin yritykseni),
+mutten onnistunut. Aika on tällä hetkellä lähtöaseman aika.
 
 ### Ajat ovat osaksi jo menneitä kellonaikoja
 
 Hain tiedot asemalle saapuvien ja lähtevien junien API puolelta (10 seuraavaa saapuvaa ja lähtevää),
 mutta API antaa jo menneitä aikoja silti. En tiedä toimiiko se oikein 
 (vai ymmärsinkö sen toimivuudesta jotain väärin).
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+
 ```
