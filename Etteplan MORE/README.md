@@ -19,20 +19,20 @@ ja selkeät jatkokehitys mahdollisuudet
 
 
 
-##Puuttuvaa/vajaata
+## Puuttuvaa/vajaata
 
 Sain tehtyä suurimman osan ennakkotehtävästä, mutta kaikkiin osiin en keksinyt ratkaisua
 
-#### Paikkakunnat ovat stationShotCode
+### Paikkakunnat ovat stationShotCode
 
 En keksinyt miten saada eri API kutsun stationName näkymään vastaavaan kohtaan
 
-#### Saapumis/lähtemisaika
+### Saapumis/lähtemisaika
 
 Lähtöaseman aika, yritin eri mahdollisuuksia saada halutun aseman aika (kirjoitin kommmentteihin yritykseni),
 mutten onnistunut
 
-#### Ajat ovat osaksi jo menneitä kellonaikoja
+### Ajat ovat osaksi jo menneitä kellonaikoja
 
 Hain tiedot asemalle saapuvien ja lähtevien junien API puolelta (10 seuraavaa saapuvaa ja lähtevää),
 mutta API antaa jo menneitä aikoja silti. En tiedä toimiiko se oikein 
