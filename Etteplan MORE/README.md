@@ -13,6 +13,9 @@ joten komponenttien ulkonäkö on pienesti erilainen, mutta täysin ymmärrettä
 Sovellus on helppokäyttöinen ja kattava tiedoiltaan, mutta paranneltavaa olisi ollut 
 peruutettujen junien rivin "himmennys"/disaplointi
 
+Käytin tiedon esille tuontiin datatablea, johon on tarvittaessa helppo liittää haluttuja lisäominaisuuksia. 
+Lisäksi tein siitä ja koko sivusta täysin skaalautuvan.
+
 Tein datan haun API:sta vuex storeen, josta sitä on helppo käyttää ja tarvittaessa muokata. 
 
 Tämä mahdollistaa hyvät jatkokehitysmahdollisuudet
