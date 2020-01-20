@@ -1,5 +1,3 @@
-# School-projects
-
 ## Etteplan MORE
 Ennakkotehtävä
 
