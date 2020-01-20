@@ -1,5 +1,8 @@
-## Etteplan MORE
-Ennakkotehtävä
+## MOREn JunaAikataulu (At first pre-assignment)
+Trainschedule project done with vue, vuex and vuetify
+
+## MOREn S-tutka (At first pre-assignment)
+Weathersite project done with vue, vuex and vuetify
 
 ## Preventos Oy project
 My project groups coding files. More explanation in folder.
