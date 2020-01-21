@@ -3,7 +3,7 @@ import httpClient from "./httpClient";
 const TYPEWEATHER = "weather?id=";
 const TYPEFORECAST = "forecast?id=";
 const METRICID = "&units=metric&appid=";
-const KEY = "5a6d31d2b562c679c5ecf125e43a7863";
+const KEY = "";
 const CITY1TAMPERE = "634964";
 const CITY2JYVÄSKYLÄ = "655195";
 const CITY3KUOPIO = "650225";
