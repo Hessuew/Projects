@@ -1,7 +1,7 @@
-## MOREn JunaAikataulu (At first pre-assignment)
+## MOREn TrainSchedule (At first pre-assignment)
 Trainschedule project done with vue, vuex and vuetify
 
-## MOREn S-tutka (At first pre-assignment)
+## MOREn WeatherSite (At first pre-assignment)
 Weathersite project done with vue, vuex and vuetify
 
 ## Preventos Oy project
