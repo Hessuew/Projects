@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 
+<<<<<<< HEAD
 <head>
     <meta charset="utf-8" />
     <title>Tehtävä 34-35</title>
@@ -28,6 +29,35 @@
             });
         });
     </script>
+=======
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 34-35</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/i18n/jquery-ui-i18n.min.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                dateFormat: "dd.mm.yy",
+                minDate: new Date("1996-01-01"),
+                maxDate: new Date("2015-12-31"),
+                onClose: function (date, datepicker) {
+                    if (date != "") {
+                        $("#pv").text(date);
+                        $("#pv").css({ "color": "black" });
+                    }
+                }
+            });
+
+            $("#kaupunki").autocomplete({ // Tehtävä 35
+                source: "http://codez.savonia.fi/jussi/api/json_data.php",
+                minLength: 2
+            });
+        });
+    </script>
+>>>>>>> 1bf856ecefdaa92726ff825197de633742624cf0
 </head>
 
 <body>

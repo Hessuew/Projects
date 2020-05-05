@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
@@ -142,4 +143,150 @@
 
 </body>
 
+=======
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+
+<input id="terms" type="text" placeholder="Nimi"></input>
+
+<br>
+
+<select id="menu">
+        <option value="">Kaikki</option>
+</select>
+
+<button id="button_search">Hae</button>
+
+<br><br>
+
+<table border=1 id="results"></table>
+
+<br><br>
+
+<button id="add">Lisää uusi</button>
+
+<div hidden id="dialog" title="Uusi asiakas">
+    <form id="omaform">
+
+        <input name="nimi" placeholder="Nimi"></input>
+        <input name="osoite" placeholder="Osoite"></input>
+        <input name="postinro" placeholder="Postinro"></input>
+        <input name="postitmp" placeholder="Postitmp"></input>
+        <select name="asty_avain" id="menu_add"></select>
+
+        <input type="submit" value="Lähetä">
+
+    </form>
+</div>
+
+<script>
+
+    $("#omaform").submit(function (event) {
+        //alert("Handler for .submit() called.");
+        event.preventDefault();
+
+        //action = "https://codez.savonia.fi/jussi/api/asiakas/lisaa.php" method = "post"
+        var d = $(this).serialize();
+        $.ajax(
+            {
+                url: "https://codez.savonia.fi/jussi/api/asiakas/lisaa.php",
+                method: 'post',  // Vaihtoehtoina get, post, delete, put (ainakin)
+                //data: d,
+                data: {nimi: "kalle", osoite: "opisotie", postinro: "71800"},
+                // nimi=o&osoite=o
+                success: function (data, status, jqXHR) {  // funktio, jota kutsutaan jos kutsu onnistuu, 
+                    console.log("data: " + data);
+                    $("#dialog").dialog("close");
+                    fetch();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("virhe: " + errorThrown);
+                }
+            }
+        )
+
+    });
+
+    $.get("https://codez.savonia.fi/jussi/api/asiakas/tyypit.php", function(data) {
+        $.each(data, function(i,e) {
+            $("#menu").append(new Option(e.selite,e.avain));
+            $("#menu_add").append(new Option(e.selite,e.avain));
+        });
+    });
+
+    function fetch() {
+        $("#results tr").remove();
+        $("#results").append("<tr>" +
+            "<td>avain</td>" +
+            "<td>nimi</td>" +
+            "<td>osoite</td>" +
+            "<td>postinro</td>" +
+            "<td>postitmp</td>" +
+            "<td>luontipvm</td>" +
+            "<td>asty_avain</td>" +
+            "</tr>");
+
+        var nimi = $("#terms").val();
+        var avain = $("#menu").val();
+
+        var url = "https://codez.savonia.fi/jussi/api/asiakas/haku.php?nimi=" + nimi;
+
+        if (avain != "") {
+            url += "&asty_avain=" + avain;
+        }
+
+        console.log("Aloitetaan haku ...");
+
+        $.get(url, function (data) {
+            $.each(data, function (i, e) {
+
+                console.log("Käsitellään riviä " + e.avain);
+
+                $("#results").append(
+                    "<tr>" +
+                    "<td>" + e.avain + "</td>" +
+                    "<td>" + e.nimi + "</td>" +
+                    "<td>" + e.osoite + "</td>" +
+                    "<td>" + e.postinro + "</td>" +
+                    "<td>" + e.postitmp + "</td>" +
+                    "<td>" + e.luontipvm + "</td>" +
+                    "<td>" + e.asty_avain + "</td>" +
+                    "<td><button onclick='poista(" + e.avain + "," + i + ")'>Poista</button></td>" +
+                    "</tr>");
+            });
+        });
+        console.log("Aloitetaan haku ... DONE");
+    }
+
+    $("#button_search").click(function () {
+        fetch();
+    });
+
+    $("#add").click(function(){
+        $("#dialog").dialog();
+     
+
+        fetch();
+    });
+
+    function poista(avain, i) {
+        $.get("https://codez.savonia.fi/jussi/api/asiakas/poista.php?avain=" + avain, function (data) {
+            var $rows = $("#results tr");
+            $rows.eq(i + 1).hide();
+        });
+    }
+
+</script>
+
+</body>
+
+>>>>>>> 1bf856ecefdaa92726ff825197de633742624cf0
 </html>

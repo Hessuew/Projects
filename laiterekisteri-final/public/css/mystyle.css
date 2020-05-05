@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿.ui-widget-overlay {
     opacity: 1;
 }
@@ -32,3 +33,39 @@ th, td {
     color: white;
 }
 
+=======
+﻿.ui-widget-overlay {
+    opacity: 1;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 10px;
+}
+
+#lisays {
+    margin: 1em;
+}
+
+
+#dialogi input[type="text"] {
+    display: block;
+}
+
+.adminjutut {
+    visibility: hidden;
+}
+
+.btn-info2 {
+    background-color: #642EFE;
+    color: white;
+}
+
+>>>>>>> 1bf856ecefdaa92726ff825197de633742624cf0

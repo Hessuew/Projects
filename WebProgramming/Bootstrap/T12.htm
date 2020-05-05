@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
     <head>
@@ -70,3 +71,77 @@
         </nav>    
     </body>
 </html>
+=======
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Flex tehtävä, köyhän miehen menubar</title>
+
+        <style>
+            .container
+            {
+                background-color:lightgrey;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                height: 100px;
+            }
+            #studies
+            {
+                flex:2;
+                margin: 5px;
+            }
+            #jobs
+            {
+                flex:4;
+                margin: 5px;
+
+            }
+
+            #news
+            {
+                flex:none;
+                margin-left: auto;
+            }
+
+            #home
+            {
+                background-color: transparent;
+                border: none;
+ 
+            }
+            a:link {
+                text-decoration: none;
+            }
+
+            div {
+                border: 1px solid red;
+            }
+    </style>
+    </head>
+    <body>
+        <nav class="container">
+            <div id="studies">
+                <a id="home" href="#">Savonia (linkki)</a>
+            </div>
+            <div id="jobs">
+                <form>
+                    <select>
+                        <option>Valitse</option>
+                        <option>Joku</option>
+                        <option>Muu</option>
+                    </select>
+                </form>
+            </div>
+            <div id="news">
+                <input type="text" placeholder="Search" id="search" />
+                <input type="submit" id="submit" value="Search" />
+            </div>
+        </nav>    
+    </body>
+</html>
+>>>>>>> 1bf856ecefdaa92726ff825197de633742624cf0

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -70,4 +71,78 @@
     </ol>
 </body>
 
+=======
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 32-33</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #feedback {
+            font-size: 1.4em;
+        }
+
+        #selectable .ui-selecting {
+            background: #FECA40;
+        }
+
+        #selectable .ui-selected {
+            background: #F39814;
+            color: white;
+
+        }
+
+        #selectable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 400px;
+        }
+
+        #selectable li {
+            margin: 3px;
+            padding: 1px;
+            float: left;
+            width: 100px;
+            height: 80px;
+            font-size: 4em;
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var t = "";
+            $("#selectable").selectable({ // Teht33 lisäykset
+                selected: function (event, ui) {
+                    t = $(ui.selected).text();
+                    $(ui.selected).text("Valittu");
+                },
+                unselected: function (event, ui) {
+                    $(ui.unselected).text(t);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <ol id="selectable">
+        <li class="ui-state-default">1</li>
+        <li class="ui-state-default">2</li>
+        <li class="ui-state-default">3</li>
+        <li class="ui-state-default">4</li>
+        <li class="ui-state-default">5</li>
+        <li class="ui-state-default">6</li>
+        <li class="ui-state-default">7</li>
+        <li class="ui-state-default">8</li>
+        <li class="ui-state-default">9</li>
+    </ol>
+</body>
+
+>>>>>>> 1bf856ecefdaa92726ff825197de633742624cf0
 </html>
