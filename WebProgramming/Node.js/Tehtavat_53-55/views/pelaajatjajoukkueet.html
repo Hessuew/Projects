@@ -1,0 +1,13 @@
+<h2>Pelaajat</h2>
+<ul>
+    {{#each pelaajat }}
+        <li>#{{this.pelinumero}} / <b>{{this.sukunimi}} {{this.etunimi}}</b> / {{this.joukkue}}</li>
+    {{/each}}
+</ul>
+
+<h2>Joukkueet</h2>
+<ol>
+    {{#each joukkueet }}
+        <li><b>{{this.nimi}}</b> / {{this.kaupunki}} / ({{#unless @index}}perustettu {{/unless}}{{this.perustamisvuosi}})</li>
+    {{/each}}
+</ol>

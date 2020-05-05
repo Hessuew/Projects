@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>t20_h3_woh</title>
+
+    <script>            
+           
+            var rivi = 5;                        
+
+            function laskePotenssit(rivi) {
+
+                console.log("Tulostetaan: " + rivi + " riviä.")
+
+                var luku = 1;                
+                var potenssi = 0;                 
+
+                for (i=0;i<rivi;i++) {                        
+                
+                    var tulos = Math.pow(luku, potenssi);
+                    console.log(luku + " potenssiin " + potenssi + " = " + tulos);
+
+                    luku++;
+                    potenssi++;
+                }
+
+                if (rivi == 0) {
+                    console.log("Et halunnut yhtään riviä tulostettavan!");
+                }
+            }
+
+            laskePotenssit(rivi);                  
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

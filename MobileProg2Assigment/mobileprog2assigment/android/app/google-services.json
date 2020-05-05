@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "142877698425",
+    "firebase_url": "https://mobiiliohjelmointi2-harjt.firebaseio.com",
+    "project_id": "mobiiliohjelmointi2-harjt",
+    "storage_bucket": "mobiiliohjelmointi2-harjt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142877698425:android:8076162af69bc99e6327a8",
+        "android_client_info": {
+          "package_name": "com.mobileprog2assigment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142877698425-rqt8nae8kcc9r2ipk03te8gbdkp682ch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileprog2assigment",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "142877698425-gb6b0tq7esie5e3rpijpp9r2d1uff0jp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileprog2assigment",
+            "certificate_hash": "e27016939610a8949377edd61007c92083e4a18f"
+          }
+        },
+        {
+          "client_id": "142877698425-acethgtne5k3tpo16scftmgn8pdb66no.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbZWvbwbWu5Uyg20s8aWx-LIdcpFUw3zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142877698425-acethgtne5k3tpo16scftmgn8pdb66no.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

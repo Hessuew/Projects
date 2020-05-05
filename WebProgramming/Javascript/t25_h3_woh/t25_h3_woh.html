@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>t25_h3_woh</title> 
+    <style>
+        p {
+            text-indent:2em;
+        }
+        article {
+            line-height: 50%;
+
+        }
+
+        .hidden {
+            display:none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <script>
+
+        function hideAll() {
+
+            var h = document.getElementsByTagName("article");
+
+            for (i=0;i<h.length;i++){
+
+                h[i].className = "hidden";
+            }           
+        }           // Piilotetaan kaikki tagit "article"
+        function show(iidee) {    
+
+            hideAll();         
+
+            var s = document.getElementById(iidee);
+            s.className = "show";
+                     
+           
+                   
+        }           // Näytetaan haluttu artikkeli       
+        
+
+    </script>
+</head>
+
+<body onload="hideAll()">
+
+    <div>
+    [<a href="#" onclick="show('TV');">TV</a>][<a href="#" onclick="show('LEHDET');">VERKKOLEHDET</a>] [<a href="#" onclick="show('URHEILUTULOKSET');">URHEILUTULOKSET</a>] [<a href="#" onclick="show('AJANVIETE');">AJANVIETE</a>]
+    </div>
+
+    <section>
+        <article id="TV">
+
+        <header>
+            <h1>TV</h1>
+        </header>        
+            <nav>
+                <a href="http://www.yle.fi">YLE</a>
+            </nav>            
+                <p> Yleisradion kotisivu: TV1, TV2, YLE24, Teksti-TV, vaalikone...</p>           
+        
+            <nav>
+                <a href="http://mtv3.fi">MTV3</a>
+            </nav>
+            <p> MTV3:n portaali: Uutiset, urheilu, ohjelmat, sähköposti, vaalikone...</p>
+
+        </article>
+    
+    </section>
+
+    <section>
+        <article id="LEHDET">
+
+        <header>
+            <h1>Verkkolehdet</h1>
+        </header>
+
+        
+            <nav>
+                <a href="http://il.fi">Iltalehti Online</a>
+            </nav>
+            <p>Iltalehden verkkolehti: Keskustelu, uutiset, urheilu, glamour,...</p>        
+        
+            <nav>
+                <a href="http://hs.fi">Helsingin Sanomat</a>
+            </nav>
+            <p>Helsingin sanomien verkkolehti: Uutiset, tänään, vaalikone, arkisto,...</p>
+        </article>   
+      </section>
+
+    <section>
+
+        <article id="URHEILUTULOKSET">
+    
+        <header>
+            <h1>Urheilutulokset</h1>
+        </header>
+    
+        
+            <nav>
+                <a href="https://www.livetulokset.com">Livetulokset</a>
+            </nav>
+            <p>Urheilun tuloksia livenä: jääkiekko, jalkapallo, tennis,...</p>    
+        
+            <nav>
+                <a href="https://yle.fi/uutiset/18-207675">Ylen urheilutulokset</a>
+            </nav>
+            <p>Ylen urheilutulospalvelu: Uutisia, livetuloksia, seurantaa,...</p>
+        </article>
+    </section>
+
+    <section>
+
+        <article id="AJANVIETE">    
+        <header>
+            <h1>Ajanviete</h1>
+        </header>    
+        
+            <nav>
+                <a href="https://www.youtube.com">Youtube</a>
+            </nav>
+            <p>Internetin suosituin videopalvelu: musiikkia, viihdettä, dokumenttejä,...</p>
+        
+            <nav>
+                <a href="https://www.reddit.com">Reddit</a>
+            </nav>
+            <p>Maailman suosituimpia keskustelufoorumeita: Uutisia, ajanvietettä, viihdettä, tiedettä,...</p>
+
+
+        </article>
+    </section>
+</body>
+</html>

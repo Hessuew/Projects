@@ -1,0 +1,60 @@
+<!doctype html>
+<title>Example</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 60px 1fr 100px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 10px;
+  margin: 0;
+  }
+header, footer, article, aside, div {
+  padding: 10px;
+  background: gold;
+}
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-area: ads; 
+  }
+</style>
+<body>
+  <header id="pageHeader">
+      <p style="text-align: center;">Tervetuloa Savoniaan</p>
+  </header>
+  <article id="mainArticle">
+      <p>Valitse vasemmalta listalta jotain</p>
+  </article>
+  <aside id="mainNav">
+    <ul style="list-style: none;">
+        <li><a href="">Opiskelu</a></li>
+        <li><a href="">Ruokailu</a></li>
+        <li><a href="">IT</a></li>
+        <li><a href="">Hallinto</a></li>
+        <li><a href="">Vapaa-aika</a></li>
+        <li><a href="">Muu</a></li>
+    </ul>
+  </aside>
+  <div id="siteAds">
+    <p>Mainoksia</p>
+  </div>
+  <footer id="pageFooter">
+    <div style="text-align: center">
+        <p>Yhteystiedot</p>
+    </div>
+  </footer>
+</body>

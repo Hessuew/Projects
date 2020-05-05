@@ -1,0 +1,97 @@
+.v-app {
+    font-family: "Arial Regular";
+    min-height: 100%;
+    width: 100%;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .my-text-style .v-label {
+    color: #262626;
+  }
+  .v-card__text.customizedPadding {
+    padding: 0;
+  }
+  .v-list-item.customizedPadding {
+    padding: 0;
+  }
+  .v-list-item__content{
+    padding-top: inherit;
+    padding-bottom: 0;
+  }
+  .v-list-item__title.cityNameText {
+    font-size: 19pt;
+    color: #262626;
+  }
+  .v-list-item__title.tempText {
+    font-size: 25pt;
+  }
+  .v-list-item__subtitle.mediumTextBlack {
+    font-size: 15pt;
+    color: #262626 !important;
+  }
+  .v-list-item__subtitle.mediumTextGrey {
+    font-size: 13pt;
+    color: #70757a;
+  }
+  .v-list-item__subtitle.smallTextGrey {
+    font-size: 10pt;
+    color: #70757a;
+  }
+  .backgroundColorBlue {
+    background-color: #e5f6fd;
+  }
+  .imgScaling {
+    max-width: 100px;
+  }
+  .smallImgScaling {
+    width: 42px;
+  }
+  .alignItemsCenter {
+    display: flex;
+    align-items: center;
+  }
+  .imgToCenter{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  @media screen and (max-width: 390px) {
+    .v-list-item__title.cityNameText {
+      font-size: 16pt;
+    }
+    .v-list-item__title.tempText {
+      font-size: 22pt;
+    }
+    .v-list-item__subtitle.mediumTextBlack {
+      font-size: 12pt;
+    }
+    .v-list-item__subtitle.mediumTextGrey {
+      font-size: 10pt;
+    }
+    .v-list-item__subtitle.smallTextGrey {
+      font-size: 10pt;
+    }
+  }
+  
+  @media screen and (min-width: 590px) {
+    .v-list-item__title.cityNameText {
+      font-size: 22pt;
+    }
+    .v-list-item__title.tempText {
+      font-size: 28pt;
+    }
+    .v-list-item__subtitle.mediumTextBlack {
+      font-size: 18pt;
+    }
+    .v-list-item__subtitle.mediumTextGrey {
+      font-size: 16pt;
+    }
+    .v-list-item__subtitle.smallTextGrey {
+      font-size: 13pt;
+    }
+    .smallImgScaling {
+      max-width: 100px;
+    }
+  }

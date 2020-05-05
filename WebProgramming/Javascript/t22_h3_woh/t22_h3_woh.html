@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>t22_h3_woh</title>
+    <script>
+        
+        function varmistaSyote() {     
+            
+            var paiva = document.getElementById("aika").value;       
+            
+            if (paiva ==""){
+               alert("Tarkista, että olet syöttänyt jotain")
+
+            } // Tarkistetaan, että käyttäjä on syöttänyt jotain
+
+            var osat = paiva.split(".");        // Pilkotaan päiviin, kuukausiin ja vuosiin                             
+            var dd = parseInt(osat[0], 10);
+            var mm = parseInt(osat[1], 10)
+            var yyyy = parseInt(osat[2], 10);     
+            
+
+            //Tarkistetaan, että päivä, kuukausi ja vuosi on annettu oikein            
+
+            if (dd<1 || dd>31) {
+               alert("Tarkista päivä.");
+            }
+            if (mm<1 || mm>12) {
+               alert("Tarkista kuukausi.");
+            }
+            if (yyyy<1900 || yyyy>2018) {
+               alert("Tarkista vuosi.")
+            }            
+            
+
+            var isnum = !(osat.some(isNaN));         
+
+            if (isnum == false){
+               alert("Tarkista, että olet syöttäny vain numeroita.")
+
+            }           // Tarkastaa onhan syötteessä vain numeroita
+
+            var syotePituus = paiva.length;
+
+            if (!(syotePituus==10)){
+               alert("Tarkista syötteen pituus.")                
+                
+                }    // Tarkastaa syötteen pituuden          
+
+
+            
+            //lasketaan ikä
+            var paiva = new Date(yyyy + "/" + mm + "/" + dd)
+            var nyky = new Date();
+            var ero = nyky - paiva;
+            var ika = Math.floor(ero / (1000 * 60 * 60 * 24 * 365.25))
+
+            document.getElementById("tulostus").innerHTML = "Ikäsi on: " + ika;       
+        }        
+
+    </script>
+</head>
+<body>
+
+    <form id="form_main" action="">
+        <label id="label_nimi" for="nimi">Anna syntymäaikasi (dd.mm.yyyy): </label>
+        <input id="aika" type="text" name="oma_syntyma" /> <br />
+        <button id="btn_tarkista" type="button" onclick="varmistaSyote();">Tarkista</button>
+    </form>
+
+
+
+    <p id="tulostus"> </p>
+
+
+
+</body>
+</html>

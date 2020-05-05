@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Tehtävä 53-55</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap: 13px;
+            background-color: #FFF;
+        }
+
+        div {
+            background-color: #FFD700;
+            padding: 2em 0.5em;
+            font-size: 1.2em;
+        }
+
+        #header {
+            grid-column: 1 / span 5;
+            text-align: right;
+        }
+
+        #content {
+            grid-column: 2 / span 3;
+        }
+
+        #footer {
+            grid-column: 1 / span 5;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#sarjataulukko').click(function (event) {
+                event.preventDefault();
+                $("#content").load("http://localhost:3000/sarjataulukko", function () {
+                    console.log('Sarjataulukko haettu.');
+                });
+            });
+            $('#pelaajatjajoukkueet').click(function (event) {
+                event.preventDefault();
+                $("#content").load("http://localhost:3000/pelaajatjajoukkueet", function () {
+                    console.log('Pelaajat ja joukkueet haettu.');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        Tervetuloa Jalkapallo-sivulle
+        <select>
+            <option value="">Valitse toiminto</option>
+            {{#each toiminnot}}
+                <option value="{{this.avain}}">{{this.selite}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div>
+        <ul style="list-style-type: none;">
+            <li><a href="" id="sarjataulukko">Sarjataulukko</a></li>
+            <li><a href="" id="pelaajatjajoukkueet">Pelaajat ja joukkueet</a></li>
+        </ul>
+    </div>
+    <div id="content">Valitse vasemmalta listalta jotain</div>
+    <div>
+        Seuraavat tapahtumat
+        <ul style="list-style-type: none;">
+            {{#each tapahtumat }}
+                <li>{{this.paivamaara}} {{this.selite}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div id="footer">Yhteystiedot</div>
+</body>
+</html>

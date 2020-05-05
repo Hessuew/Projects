@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>142877698425-h19qnb30v62095i3j1cnh19f5srj4roj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.142877698425-h19qnb30v62095i3j1cnh19f5srj4roj</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>142877698425-rqt8nae8kcc9r2ipk03te8gbdkp682ch.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCPNtCHJ1hPNB-eS6QOK7X_Tuf79QxW9_s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>142877698425</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mobileprog2assigment</string>
+	<key>PROJECT_ID</key>
+	<string>mobiiliohjelmointi2-harjt</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mobiiliohjelmointi2-harjt.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:142877698425:ios:4b5f37d974bb6fb66327a8</string>
+	<key>DATABASE_URL</key>
+	<string>https://mobiiliohjelmointi2-harjt.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script src="tcd.survey.js"></script>
+    <script>
+        var timezone = new Date().getTimezoneOffset()/60
+        var options = {
+            surveyLink: "https://survey.tcdcon.com/answer/?id=FDC24A548F524019A86C9B3480759693",
+            cookieDays1: 5 + (timezone), 
+            cookieDays2: 24 * 365 * 20, //tunnit * päivät * vuodet
+            cookieId: "3341;2222;4444;6666",
+            setTimeouttime: 200,
+            text: {
+                headerText: "Hei! Haluatko osallistua yritystämme koskevaan tyytyväisyyskyselyyn?",
+                bodyText: "Kyselyyn vastaaminen kestää noin 5 minuuttia.",
+                YesbuttonText: "Kyllä",
+                NoButtonText: "Ei",
+            }
+        };
+        checkCookie(options);
+    </script>
+
+</body>
+
+</html>
