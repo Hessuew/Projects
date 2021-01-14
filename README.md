@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## MOREn JunaAikataulu (At first pre-assignment)
 Trainschedule project done with vue, vuex and vuetify
 
@@ -8,7 +8,6 @@ Trainschedule project done with vue, vuex and vuetify
 Trainschedule project done with vue, vuex and vuetify
 
 ## MOREn WeatherSite (At first pre-assignment)
->>>>>>> 1bf856ecefdaa92726ff825197de633742624cf0
 Weathersite project done with vue, vuex and vuetify
 
 ## Preventos Oy project
